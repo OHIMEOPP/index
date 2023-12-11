@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-  
+    <!--style是css做修飾-->
     
 </head>
 <body>
@@ -10,18 +10,27 @@
         <label for="username">用户名：</label>
         <input type="text" name="test"><br><br>
 
-        <label >密哪:</label>
-        <input type="password" name="password"><br><br>
+        <label >密碼:</label>
+        <input type="pas" name="password"><br><br>
         <!-- <label for="username">密碼：</label> -->
         <!-- <input type="password" id="password" name="password"><br><br> -->
         <!--<input type="file" name="file" />-->
         <!-- <input type="submit" value="上傳" /> -->
         <button type="submit">按下</button>
     </form>
+    <form action = 'http://localhost:8000/index.php' method="post">
+        <input type="text" name = "NAME">
+        <button type="submit">註冊</button>
+
+    </form>
+        
+    <form action = 'http://localhost:8000/index.php' method="post">
+        <input type="text" name = "Add">
+        <input type="text " name = "password">
+        <button type="submit">增加</button>
+    </form>
+
     
-    <!--div為容器 class名稱為waring-->
-    
-    <a href='http://localhost:8000' >進PHP</a>
 </body>
 </html>
 
