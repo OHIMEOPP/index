@@ -2,30 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!--style是css做修飾-->
-    <style>
-        .warning {
-            /* 邊框 */
-            border: 10px ridge #f00;
-            /* 背景颜色 */
-            background-color: rgb(0, 255, 51);
-            /* 內邊距 */
-            padding: 1rem;
-            /* 顯示方式 */
-            /* display: flex; */
-            /* Flex布局方向 */
-            flex-direction: column;
-        }
-       /*圖片大小*/
-        .warning img {
-            width: 20%;
-        }
   
-        .warning p {
-            font: small-caps bold 1rem sans-serif;
-            text-align: center;
-        }
-    </style>
+    
 </head>
 <body>
     <form action='http://localhost:8000/index.php' method="post">
@@ -42,32 +20,7 @@
     </form>
     
     <!--div為容器 class名稱為waring-->
-    <div class="warning">
-        <img src = "imag/icon.gif" alt = "這是破圖">
-        <img src="https://janstockcoin.com/wp-content/uploads/2021/06/pexels-photo-747964-scaled.jpeg">
-        <img src="imag\photo_01.jpg">
-        <img src="imag\photo_01.png">
-<!--         <p>Beware of the leopard</p> -->
-    </div>
     
-    <script>//為javaScript的幻燈片
-        var slideIndex = 0;
-        carousel(); // 调用轮播函数
-
-        function carousel() {
-            //CSS選擇器 document為HTML的資料,querySelectorAll為他的方法,指定Css中的(名子 元素)
-            var slides = document.querySelectorAll('.warning img'); // 获取所有图片
-            for (var i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none"; // 隐藏所有图片
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1; // 重置索引为1
-            }
-            slides[slideIndex - 1].style.display = "block"; // 显示当前图片
-            setTimeout(carousel, 2000); // 每2秒切换一次图片
-        }
-    </script>
     <a href='http://localhost:8000' >進PHP</a>
 </body>
 </html>
