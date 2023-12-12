@@ -27,36 +27,48 @@
                 }
             </style>
     </head>
-    <body style="background-image: url('imag/GAJ2KPWa4AA5-Rz.jpg');background-repeat: no-repeat;background-size: cover;">
+    <body style="background-image: url('imag/photo_01.jpg');background-repeat: no-repeat;background-size: cover;" id = "background;">
         登入成功
         <a href='https://ohimeopp.github.io/index/index.html' >返回登入介面</a>
     </body>
         <!--div為容器 class名稱為waring-->
         <div class="warning">
-            <img src = "imag/icon.gif" alt = "這是破圖">
+            <img src = "imag/icon.gif" alt = "這是破圖" id = "imgONE">
             <img src="https://janstockcoin.com/wp-content/uploads/2021/06/pexels-photo-747964-scaled.jpeg">
             <img src="imag\photo_01.jpg">
             <img src="imag\photo_01.png">
             <p>Beware of the leopard</p>
         </div>
-  
-        
+        <!-- 上傳圖片的地方 -->
+        <input type="file" id = "upImg">
+        <img src = "" id = "img" alt = "無圖片" width="250" height="250">
+
         <script>//為javaScript的幻燈片
             var slideIndex = 0;
             carousel(); // 调用轮播函数
     
             function carousel() {
                 //CSS選擇器 document為HTML的資料,querySelectorAll為他的方法,指定Css中的(名子 元素)
-                var slides = document.querySelectorAll('.warning img'); // 获取所有图片
+                var slides = document.querySelectorAll('.warning img'); // 獲取所有圖片
                 for (var i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none"; // 隐藏所有图片
+                    slides[i].style.display = "none"; // 隱藏所有圖片
                 }
                 slideIndex++;
                 if (slideIndex > slides.length) {
-                    slideIndex = 1; // 重置索引为1
+                    slideIndex = 1; // 重置索引為1
                 }
-                slides[slideIndex - 1].style.display = "block"; // 显示当前图片
-                setTimeout(carousel, 2000); // 每2秒切换一次图片
+                slides[slideIndex - 1].style.display = "block"; // 顯示當前圖片
+                setTimeout(carousel, 2000); // 每2秒切换一次圖片
             }
+
+            //顯示上傳圖片
+            var filename = document.getElementById("upImg");
+            var img = document.getElementById("imgONE");
+            var img1 = document.getElementById("img");
+            filename.onchange = function(){
+                img.src = URL.createObjectURL(this.files[0]);
+                img1.src = URL.createObjectURL(this.files[0]);
+            }
+            
         </script>
 </html>
