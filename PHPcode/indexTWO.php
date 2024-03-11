@@ -1,0 +1,261 @@
+<?php
+session_start();
+$imgLight = array(
+    "imag/icon.gif",
+    "https://janstockcoin.com/wp-content/uploads/2021/06/pexels-photo-747964-scaled.jpeg",
+    "imag/photo_01.jpg",
+    "imag/ad.png"
+);
+$pagearray = array(
+    array(
+        'URL' => "frontpage",
+        'name' => "首頁"
+    ),
+    array(
+        'URL' => "uploadare",
+        'name' => "上傳區"
+    )
+);
+$myIMG = array(
+    "imag/GAEEc1DbAAAVna8.jpg"
+);
+
+$backGroundImg = "imag/background.jpg";
+$myTwitter = "https://twitter.com/Satsuma_1odore8";
+$_myURL2 = "indexAcount.php";
+$page = $_GET["page"];
+//隨機密碼
+// $password = "";
+// $finlpass = "8492";
+// $text = "0123456789";
+// while ($finlpass != $password) {
+//     $password = "";
+//     for ($i = 0; $i <= 3; $i++) {
+//         $password .= $text[rand(0, strlen($text) - 1)];
+//         // echo $i ."<br>";
+
+//     }
+// }
+
+// echo "<br>" . $password ."<br>";
+// echo $_POST["PS"];
+// $ARY = array();
+// array_push($ARY, "asd", "123", "ddasd", "aasd", "bS", "1");
+// echo count($ARY) . "<br>";
+// sort($ARY);
+// join($ARY);
+// print_r(join(":", $ARY));
+// echo $_COOKIE["myName"];
+
+?>
+<?php if (isset($_SESSION['is_login']) && $_SESSION['is_login']) : ?>
+
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>首頁</title>
+        <mata charset="UTF-8">
+            <style>
+                /* @import url('indexCSS.css'); */
+                <?php require_once 'indexCSS.css';?>
+            </style>
+    </head>
+
+    <body id="body">
+        <div class="menu navbar-fixed-top">
+            <nav>
+                <ul>
+                    <?php foreach ($pagearray as $key => $name) : ?>
+                        <a href="indexTWO.php?page=<?php echo $name['URL'] ?>"><?php echo $name['name'] ?></a>
+                    <?php endforeach; ?>
+                </ul>
+                <i style="position: absolute; top: 20px; right: 50px; color: rgb(245, 0, 0)" class="material-icons">search</i>
+            </nav>
+        </div>
+        <?php if (isset($_GET["page"]) && $_GET["page"] == "frontpage") : ?>
+            <div class="mainframe">
+                <!--div為容器 class名稱為waring-->
+                <div class="asd">
+                    <div class="warning">
+                        <a>登入成功</a>
+                        <a href='logout.php'>登出<br></a>
+
+                        <?php
+                        // foreach ($imgLight as $key => $value) {
+                        //     // 將圖片附上網址
+                        //     echo "<a href = '$myTwitter'> $value</a>";
+                        // }
+                        ?>
+                        <!-- 映出所有圖片 -->
+                        <?php foreach ($imgLight as $key) : ?>
+                            <a href=<?php echo $myTwitter ?>><img src="<?php echo $key ?>" id=""></a>
+                        <?php endforeach; ?>
+
+                        <p id="mytext">我的跑馬燈\ w o w / <br> <?php echo date("Y/m/d H:i:s"); ?></p>
+                    </div>
+                </div>
+                <div class="uploadImgAre">
+                    <div class="displayImg">
+                        <img src="" id="img" alt="無圖片" width="50" height="50">
+                    </div>
+                    <!-- 上傳圖片的地方 -->
+                    <div class="uploadImgAre_inputButton">
+                        <!-- 選擇上傳圖片 -->
+                        <input type="file" id="upImg" style="display:none">
+                        <label for="upImg">
+                            <!-- 上傳圖片按鈕的圖片 -->
+                            <img src="imag/uploadIMG.png" width="100" height="100">
+                        </label>
+                    </div>
+                </div>
+                <!-- 按鈕回到最上層，呼叫回到top涵式 -->
+                <button onclick="topFunction()" class="topButton" title="Go to top" id="topbutton">&#8679;</button>
+
+                <div>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                    <a href='indexAcount.php'>返回登入介面<br></a>
+                </div>
+
+
+            </div>
+        <?php endif; ?>
+    <?php else : ?>
+        <?php header("Location: logout.php"); ?>
+    <?php endif; ?>
+    </body>
+
+    <script>
+        //為javaScript的幻燈片
+        var slideIndex = 0;
+        var strcoll = 0;
+        carousel(); // 调用轮播函数
+        uploads();
+        displaybutton();
+
+        function carousel() {
+            //CSS選擇器 document為HTML的資料,querySelectorAll為他的方法,指定Css中的(名子 元素)
+            var slides = document.querySelectorAll('.warning img'); // 獲取所有圖片
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; // 隱藏所有圖片
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1; // 重置索引為1
+            }
+            slides[slideIndex - 1].style.display = "block"; // 顯示當前圖片
+            setTimeout(carousel, 1000); // 每n秒切换一次圖片
+        }
+
+        function uploads() {
+            //顯示上傳圖片
+            var filename = document.getElementById("upImg");
+            var img = document.getElementById("body");
+            var img1 = document.getElementById("img");
+            filename.onchange = function() {
+                img.style.backgroundImage = "url('" + URL.createObjectURL(this.files[0])
+                img.src = URL.createObjectURL(this.files[0]);
+                img1.src = URL.createObjectURL(this.files[0]);
+            }
+        }
+
+        function topFunction() {
+            var currentY = window.scrollY;
+            var step = currentY / 20; // 步長，控制平滑滾動的速度
+
+            function smoothScroll() {
+
+                if (window.scrollY > 0) {
+                    window.scrollBy(0, -step); // 向上滾動
+                    requestAnimationFrame(smoothScroll);
+                }
+
+            }
+
+            smoothScroll();
+        }
+        // 判斷最高捲動頂部函數
+        function displaybutton() {
+            var topButton = document.getElementById("topbutton");
+            if (window.scrollY <= 0) {
+                topButton.style.display = "none";
+            } else {
+                topButton.style.display = "block";
+            }
+            var phpvalue = "<?php echo $_myURL2 ?>";
+            setTimeout(displaybutton, 100);
+        }
+    </script>
+
+    </html>
